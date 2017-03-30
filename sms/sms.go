@@ -3,7 +3,7 @@ package sms
 import (
 	"net/http"
 
-	"github.com/denverdino/aliyungo/common"
+	"github.com/51idc/aliyungo/common"
 )
 
 type SendSmsArgs struct {

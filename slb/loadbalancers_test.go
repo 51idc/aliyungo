@@ -3,7 +3,7 @@ package slb
 import (
 	"testing"
 
-	"github.com/denverdino/aliyungo/common"
+	"github.com/51idc/aliyungo/common"
 )
 
 func TestLoadBlancer(t *testing.T) {

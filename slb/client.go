@@ -3,7 +3,7 @@ package slb
 import (
 	"os"
 
-	"github.com/denverdino/aliyungo/common"
+	"github.com/51idc/aliyungo/common"
 )
 
 type Client struct {

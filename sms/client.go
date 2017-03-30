@@ -1,6 +1,6 @@
 package sms
 
-import "github.com/denverdino/aliyungo/common"
+import "github.com/51idc/aliyungo/common"
 
 const (
 	SmsEndPoint = "https://sms.aliyuncs.com/"

@@ -3,7 +3,7 @@ package metadata
 import (
 	"errors"
 	"fmt"
-	"github.com/denverdino/aliyungo/util"
+	"github.com/51idc/aliyungo/util"
 	"io"
 	"io/ioutil"
 	"net"

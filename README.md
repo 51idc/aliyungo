@@ -36,7 +36,7 @@ package main
 import (
 	"fmt"
 
-	"github.com/denverdino/aliyungo/ecs"
+	"github.com/51idc/aliyungo/ecs"
 )
 
 const ACCESS_KEY_ID = "<YOUR_ID>"
@@ -51,29 +51,29 @@ func main() {
 
 ## Documentation
 
-  *  ECS: [https://godoc.org/github.com/denverdino/aliyungo/ecs](https://godoc.org/github.com/denverdino/aliyungo/ecs) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/ecs?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/ecs)
-  *  OSS: [https://godoc.org/github.com/denverdino/aliyungo/oss](https://godoc.org/github.com/denverdino/aliyungo/oss) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/oss?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/oss)
-  *  SLB: [https://godoc.org/github.com/denverdino/aliyungo/slb](https://godoc.org/github.com/denverdino/aliyungo/slb) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/slb?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/slb)
-  *  DNS: [https://godoc.org/github.com/denverdino/aliyungo/dns](https://godoc.org/github.com/denverdino/aliyungo/dns) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/dns?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/dns)
-  *  SLS: [https://godoc.org/github.com/denverdino/aliyungo/sls](https://godoc.org/github.com/denverdino/aliyungo/sls) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/sls?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/sls)
-  *  RAM: [https://godoc.org/github.com/denverdino/aliyungo/ram](https://godoc.org/github.com/denverdino/aliyungo/ram) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/ram?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/ram)
-  *  RDS: [https://godoc.org/github.com/denverdino/aliyungo/rds](https://godoc.org/github.com/denverdino/aliyungo/rds) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/rds?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/rds)
-  *  CMS: [https://godoc.org/github.com/denverdino/aliyungo/cms](https://godoc.org/github.com/denverdino/aliyungo/cms) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/cms?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/cms)
-  *  CS: [https://godoc.org/github.com/denverdino/aliyungo/cs](https://godoc.org/github.com/denverdino/aliyungo/cs) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/cs?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/cs)
-  *  STS: [https://godoc.org/github.com/denverdino/aliyungo/sts](https://godoc.org/github.com/denverdino/aliyungo/sts) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/sts?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/sts)
-  *  DM: [https://godoc.org/github.com/denverdino/aliyungo/dm](https://godoc.org/github.com/denverdino/aliyungo/dm) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/dm?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/dm)
-  *  SMS: [https://godoc.org/github.com/denverdino/aliyungo/sms](https://godoc.org/github.com/denverdino/aliyungo/sms) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/sms?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/sms)
-  *  MQ: [https://godoc.org/github.com/denverdino/aliyungo/mq](https://godoc.org/github.com/denverdino/aliyungo/mq) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/mq?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/mq) 
-  *  NAS: [https://godoc.org/github.com/denverdino/aliyungo/nas](https://godoc.org/github.com/denverdino/aliyungo/nas) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/nas?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/nas) 
-  *  OPENSEARCH: [https://godoc.org/github.com/denverdino/aliyungo/opensearch](https://godoc.org/github.com/denverdino/aliyungo/opensearch) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/opensearch?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/opensearch) 
-  *  PUSH: [https://godoc.org/github.com/denverdino/aliyungo/push](https://godoc.org/github.com/denverdino/aliyungo/push) [![GoDoc](https://godoc.org/github.com/denverdino/aliyungo/push?status.svg)](https://godoc.org/github.com/denverdino/aliyungo/push) 
+  *  ECS: [https://godoc.org/github.com/51idc/aliyungo/ecs](https://godoc.org/github.com/51idc/aliyungo/ecs) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/ecs?status.svg)](https://godoc.org/github.com/51idc/aliyungo/ecs)
+  *  OSS: [https://godoc.org/github.com/51idc/aliyungo/oss](https://godoc.org/github.com/51idc/aliyungo/oss) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/oss?status.svg)](https://godoc.org/github.com/51idc/aliyungo/oss)
+  *  SLB: [https://godoc.org/github.com/51idc/aliyungo/slb](https://godoc.org/github.com/51idc/aliyungo/slb) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/slb?status.svg)](https://godoc.org/github.com/51idc/aliyungo/slb)
+  *  DNS: [https://godoc.org/github.com/51idc/aliyungo/dns](https://godoc.org/github.com/51idc/aliyungo/dns) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/dns?status.svg)](https://godoc.org/github.com/51idc/aliyungo/dns)
+  *  SLS: [https://godoc.org/github.com/51idc/aliyungo/sls](https://godoc.org/github.com/51idc/aliyungo/sls) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/sls?status.svg)](https://godoc.org/github.com/51idc/aliyungo/sls)
+  *  RAM: [https://godoc.org/github.com/51idc/aliyungo/ram](https://godoc.org/github.com/51idc/aliyungo/ram) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/ram?status.svg)](https://godoc.org/github.com/51idc/aliyungo/ram)
+  *  RDS: [https://godoc.org/github.com/51idc/aliyungo/rds](https://godoc.org/github.com/51idc/aliyungo/rds) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/rds?status.svg)](https://godoc.org/github.com/51idc/aliyungo/rds)
+  *  CMS: [https://godoc.org/github.com/51idc/aliyungo/cms](https://godoc.org/github.com/51idc/aliyungo/cms) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/cms?status.svg)](https://godoc.org/github.com/51idc/aliyungo/cms)
+  *  CS: [https://godoc.org/github.com/51idc/aliyungo/cs](https://godoc.org/github.com/51idc/aliyungo/cs) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/cs?status.svg)](https://godoc.org/github.com/51idc/aliyungo/cs)
+  *  STS: [https://godoc.org/github.com/51idc/aliyungo/sts](https://godoc.org/github.com/51idc/aliyungo/sts) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/sts?status.svg)](https://godoc.org/github.com/51idc/aliyungo/sts)
+  *  DM: [https://godoc.org/github.com/51idc/aliyungo/dm](https://godoc.org/github.com/51idc/aliyungo/dm) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/dm?status.svg)](https://godoc.org/github.com/51idc/aliyungo/dm)
+  *  SMS: [https://godoc.org/github.com/51idc/aliyungo/sms](https://godoc.org/github.com/51idc/aliyungo/sms) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/sms?status.svg)](https://godoc.org/github.com/51idc/aliyungo/sms)
+  *  MQ: [https://godoc.org/github.com/51idc/aliyungo/mq](https://godoc.org/github.com/51idc/aliyungo/mq) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/mq?status.svg)](https://godoc.org/github.com/51idc/aliyungo/mq) 
+  *  NAS: [https://godoc.org/github.com/51idc/aliyungo/nas](https://godoc.org/github.com/51idc/aliyungo/nas) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/nas?status.svg)](https://godoc.org/github.com/51idc/aliyungo/nas) 
+  *  OPENSEARCH: [https://godoc.org/github.com/51idc/aliyungo/opensearch](https://godoc.org/github.com/51idc/aliyungo/opensearch) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/opensearch?status.svg)](https://godoc.org/github.com/51idc/aliyungo/opensearch) 
+  *  PUSH: [https://godoc.org/github.com/51idc/aliyungo/push](https://godoc.org/github.com/51idc/aliyungo/push) [![GoDoc](https://godoc.org/github.com/51idc/aliyungo/push?status.svg)](https://godoc.org/github.com/51idc/aliyungo/push) 
 
 ## Build and Install
 
 go get:
 
 ```sh
-go get github.com/denverdino/aliyungo
+go get github.com/51idc/aliyungo
 ```
 
 
@@ -161,7 +161,7 @@ go test
 
 
 ## License
-This project is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/denverdino/aliyungo/blob/master/LICENSE.txt) for the full license text.
+This project is licensed under the Apache License, Version 2.0. See [LICENSE](https://github.com/51idc/aliyungo/blob/master/LICENSE.txt) for the full license text.
 
 
 ## Related projects

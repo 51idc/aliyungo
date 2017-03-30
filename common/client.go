@@ -10,7 +10,7 @@ import (
 	"strings"
 	"time"
 
-	"github.com/denverdino/aliyungo/util"
+	"github.com/51idc/aliyungo/util"
 )
 
 // A Client represents a client of ECS services

@@ -6,8 +6,8 @@ import (
 	"strconv"
 	"time"
 
-	"github.com/denverdino/aliyungo/common"
-	"github.com/denverdino/aliyungo/util"
+	"github.com/51idc/aliyungo/common"
+	"github.com/51idc/aliyungo/util"
 )
 
 // InstanceStatus represents instance status

@@ -1,7 +1,7 @@
 package oss
 
 import (
-	"github.com/denverdino/aliyungo/util"
+	"github.com/51idc/aliyungo/util"
 )
 
 var originalStrategy = attempts

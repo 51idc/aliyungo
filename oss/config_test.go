@@ -1,6 +1,6 @@
 package oss_test
 
-import "github.com/denverdino/aliyungo/oss"
+import "github.com/51idc/aliyungo/oss"
 
 //
 //There are two ways to run unit tests here:

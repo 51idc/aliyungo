@@ -1,7 +1,7 @@
 package cms
 
 import (
-	"github.com/denverdino/aliyungo/common"
+	"github.com/51idc/aliyungo/common"
 	"os"
 	"testing"
 )

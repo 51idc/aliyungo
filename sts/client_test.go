@@ -3,7 +3,7 @@ package sts
 import (
 	"os"
 
-	"github.com/denverdino/aliyungo/ram"
+	"github.com/51idc/aliyungo/ram"
 )
 
 /*

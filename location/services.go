@@ -1,7 +1,7 @@
 package location
 
 import (
-	"github.com/denverdino/aliyungo/common"
+	"github.com/51idc/aliyungo/common"
 )
 
 type DescribeServicesArgs struct {

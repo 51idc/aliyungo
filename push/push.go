@@ -3,7 +3,7 @@ package push
 import (
 	"net/http"
 
-	"github.com/denverdino/aliyungo/common"
+	"github.com/51idc/aliyungo/common"
 )
 
 //高级推送参数

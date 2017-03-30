@@ -2,7 +2,7 @@ package cms
 
 import (
 	"bytes"
-	"github.com/denverdino/aliyungo/cms/util"
+	"github.com/51idc/aliyungo/cms/util"
 	//	"fmt"
 	"encoding/json"
 	"errors"

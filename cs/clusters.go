@@ -4,9 +4,9 @@ import (
 	"net/http"
 	"net/url"
 
-	"github.com/denverdino/aliyungo/common"
-	"github.com/denverdino/aliyungo/ecs"
-	"github.com/denverdino/aliyungo/util"
+	"github.com/51idc/aliyungo/common"
+	"github.com/51idc/aliyungo/ecs"
+	"github.com/51idc/aliyungo/util"
 )
 
 type ClusterState string

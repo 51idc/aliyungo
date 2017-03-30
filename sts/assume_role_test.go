@@ -7,7 +7,7 @@ import (
 	"testing"
 	"time"
 
-	"github.com/denverdino/aliyungo/ram"
+	"github.com/51idc/aliyungo/ram"
 )
 
 /*

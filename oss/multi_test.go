@@ -4,7 +4,7 @@ import (
 	//"encoding/xml"
 	"testing"
 
-	"github.com/denverdino/aliyungo/oss"
+	"github.com/51idc/aliyungo/oss"
 	//"io"
 	//"io/ioutil"
 	"strings"
