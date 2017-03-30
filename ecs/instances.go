@@ -220,7 +220,7 @@ const (
 //
 // You can read doc at http://docs.aliyun.com/#/pub/ecs/open-api/datatype&instanceattributestype
 type InstanceAttributesType struct {
-	AccountId          int64
+	AccountName        string
 	InstanceId         string
 	InstanceName       string
 	Description        string
