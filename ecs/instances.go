@@ -255,6 +255,7 @@ type InstanceAttributesType struct {
 		Tag []TagItemType
 	}
 	SpotStrategy SpotStrategyType
+	LastSyncTime time.Time
 }
 
 type DescribeInstanceAttributeResponse struct {
