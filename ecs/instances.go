@@ -225,6 +225,7 @@ type InstanceAttributesType struct {
 	InstanceName       string
 	Description        string
 	ImageId            string
+	OSType             string
 	RegionId           common.Region
 	ZoneId             string
 	CPU                int
