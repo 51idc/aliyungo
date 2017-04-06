@@ -31,7 +31,15 @@ func (client *Client) Init(endpoint, version, accessKeyId, accessKeySecret strin
 	client.AccessKeyId = accessKeyId
 	client.AccessKeySecret = accessKeySecret + "&"
 	client.debug = false
-	client.httpClient = &http.Client{}
+	client.httpClient = &http.Client{
+		//Timeout: 5 * time.Second, // 从连接(Dial)到读完response body
+		Transport: &http.Transport{
+			DisableCompression: true,
+			//Dial: (&net.Dialer{
+			//	Timeout: 20 * time.Second, //建立连接时间
+			//}).Dial,
+		},
+	}
 	client.endpoint = endpoint
 	client.version = version
 }
@@ -138,14 +146,21 @@ func (client *Client) Invoke(action string, args interface{}, response interface
 	defer httpResp.Body.Close()
 	body, err := ioutil.ReadAll(httpResp.Body)
 
+	if client.debug {
+		log.Printf("Raw body (%s) (%v) (status:%v)", string(body), body, httpResp.Status)
+	}
+	if len(body) == 0 {
+		return nil
+	}
 	if err != nil {
+		log.Println("io read (%v)", err)
 		return GetClientError(err)
 	}
 
 	if client.debug {
 		var prettyJSON bytes.Buffer
 		err = json.Indent(&prettyJSON, body, "", "    ")
-		log.Println(string(prettyJSON.Bytes()))
+		log.Println("prettyJSON", string(prettyJSON.Bytes()))
 	}
 
 	if statusCode >= 400 && statusCode <= 599 {
@@ -161,6 +176,7 @@ func (client *Client) Invoke(action string, args interface{}, response interface
 	err = json.Unmarshal(body, response)
 	//log.Printf("%++v", response)
 	if err != nil {
+		log.Println("Unmarshal aliyun respons err", err)
 		return GetClientError(err)
 	}
 

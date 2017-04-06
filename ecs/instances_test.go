@@ -32,6 +32,31 @@ func ExampleClient_DescribeInstanceStatus() {
 	}
 }
 
+func ExampleClient_DescribeInstances() {
+	fmt.Printf("DescribeInstances Example\n")
+
+	args := DescribeInstancesArgs{
+		//RegionId: "cn-zhangjiakou",
+		//RegionId: "ap-northeast-1",
+		RegionId: "eu-central-1",
+		Pagination: common.Pagination{
+			PageNumber: 1,
+			PageSize:   20,
+		},
+	}
+
+	client := NewTestClientForDebug()
+	instanceStatus, _, err := client.DescribeInstances(&args)
+
+	if err != nil {
+		fmt.Printf("Failed to describe Instance: %s status:%v \n", TestInstanceId, err)
+	} else {
+		for i := 0; i < len(instanceStatus); i++ {
+			fmt.Printf("Instance %s Status: %s \n", instanceStatus[i].InstanceId, instanceStatus[i].Status)
+		}
+	}
+}
+
 func ExampleClient_DescribeInstanceAttribute() {
 	fmt.Printf("DescribeInstanceAttribute Example\n")
 

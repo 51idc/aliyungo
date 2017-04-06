@@ -5,8 +5,8 @@ import "github.com/51idc/aliyungo/common"
 //Modify with your Access Key Id and Access Key Secret
 
 const (
-	TestAccessKeyId     = "MY_ACCESS_KEY_ID"
-	TestAccessKeySecret = "MY_ACCESS_KEY_SECRET"
+	TestAccessKeyId     = ""
+	TestAccessKeySecret = ""
 	TestInstanceId      = "MY_TEST_INSTANCEID"
 	TestSecurityGroupId = "MY_TEST_SECURITY_GROUP_ID"
 	TestImageId         = "MY_IMAGE_ID"

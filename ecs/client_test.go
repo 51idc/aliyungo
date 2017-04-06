@@ -73,3 +73,7 @@ func TestECSDescribe(t *testing.T) {
 		}
 	}
 }
+
+func TestExampleClient_DescribeInstances(t *testing.T) {
+	ExampleClient_DescribeInstances()
+}
