@@ -149,9 +149,9 @@ func (client *Client) Invoke(action string, args interface{}, response interface
 	if client.debug {
 		log.Printf("Raw body (%s) (%v) (status:%v)", string(body), body, httpResp.Status)
 	}
-	if len(body) == 0 {
-		return nil
-	}
+	//if len(body) == 0 {
+	//	return nil
+	//}
 	if err != nil {
 		log.Println("io read (%v)", err)
 		return GetClientError(err)

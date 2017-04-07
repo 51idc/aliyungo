@@ -75,5 +75,7 @@ func TestECSDescribe(t *testing.T) {
 }
 
 func TestExampleClient_DescribeInstances(t *testing.T) {
-	ExampleClient_DescribeInstances()
+	if err := ExampleClient_DescribeInstances(); err != nil {
+		t.Error(err)
+	}
 }
