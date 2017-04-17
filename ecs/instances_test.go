@@ -37,8 +37,8 @@ func ExampleClient_DescribeInstances() error {
 
 	args := DescribeInstancesArgs{
 		//RegionId: "cn-zhangjiakou",
-		//RegionId: "ap-northeast-1",
-		RegionId: "eu-central-1",
+		RegionId: "ap-northeast-1",
+		//RegionId: "eu-central-1",
 		//RegionId: "ap-southeast-1",
 		Pagination: common.Pagination{
 			PageNumber: 1,
@@ -46,7 +46,7 @@ func ExampleClient_DescribeInstances() error {
 		},
 	}
 
-	client := NewTestClientForDebug()
+	client := NetTestLocationClientForDebug()
 	instanceStatus, _, err := client.DescribeInstances(&args)
 
 	if err != nil {

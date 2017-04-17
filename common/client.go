@@ -56,11 +56,11 @@ func (client *Client) NewInit(endpoint, version, accessKeyId, accessKeySecret, s
 	client.Init(endpoint, version, accessKeyId, accessKeySecret)
 	client.serviceCode = serviceCode
 	client.regionID = regionID
-	client.setEndpointByLocation(regionID, serviceCode, accessKeyId, accessKeySecret)
+	client.SetEndpointByLocation(regionID, serviceCode, accessKeyId, accessKeySecret)
 }
 
-//NewClient using location service
-func (client *Client) setEndpointByLocation(region Region, serviceCode, accessKeyId, accessKeySecret string) {
+// SetEndpointByLocation NewClient using location service
+func (client *Client) SetEndpointByLocation(region Region, serviceCode, accessKeyId, accessKeySecret string) {
 	locationClient := NewLocationClient(accessKeyId, accessKeySecret)
 	ep := locationClient.DescribeOpenAPIEndpoint(region, serviceCode)
 	if ep == "" {
