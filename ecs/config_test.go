@@ -12,6 +12,9 @@ const (
 	TestImageId         = "MY_IMAGE_ID"
 	TestAccountId       = "MY_TEST_ACCOUNT_ID" //Get from https://account.console.aliyun.com
 	TestRegionID        = common.APNorthEast1
+	TestRegionID2       = common.Zhangjiakou
+	TestRegionID3       = common.Hangzhou
+	TestRegionID4       = common.Qingdao
 	TestInstanceType    = "ecs.n4.large"
 	TestVSwitchID       = "MY_TEST_VSWITCHID"
 
@@ -42,7 +45,7 @@ var testLocationClient *Client
 
 func NetTestLocationClientForDebug() *Client {
 	if testLocationClient == nil {
-		testLocationClient = NewECSClient(TestAccessKeyId, TestAccessKeySecret, TestRegionID)
+		testLocationClient = NewECSClient(TestAccessKeyId, TestAccessKeySecret, TestRegionID2)
 		testLocationClient.SetDebug(true)
 	}
 

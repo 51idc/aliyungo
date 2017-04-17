@@ -117,7 +117,7 @@ func (client *Client) SetBusinessInfo(businessInfo string) {
 
 // Invoke sends the raw HTTP request for ECS services
 func (client *Client) Invoke(action string, args interface{}, response interface{}) error {
-
+	retry := 0
 	request := Request{}
 	request.init(client.version, action, client.AccessKeyId)
 
@@ -140,9 +140,16 @@ func (client *Client) Invoke(action string, args interface{}, response interface
 	httpReq.Header.Set("X-SDK-Client", `AliyunGO/`+Version+client.businessInfo)
 
 	t0 := time.Now()
+RETRY:
 	httpResp, err := client.httpClient.Do(httpReq)
 	t1 := time.Now()
+	if shouldRetryCancel(err, retry) {
+		retry++
+		goto RETRY
+	}
+
 	if err != nil {
+		log.Println("http do err:", err.Error())
 		return GetClientError(err)
 	}
 	statusCode := httpResp.StatusCode
@@ -358,4 +365,12 @@ func GetClientErrorFromString(str string) error {
 
 func GetClientError(err error) error {
 	return GetClientErrorFromString(err.Error())
+}
+
+func shouldRetryCancel(err error, retry int) bool {
+	if err != nil && retry < 3 {
+		log.Println("rerey: ", retry)
+		return true
+	}
+	return false
 }

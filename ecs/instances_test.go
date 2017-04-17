@@ -36,8 +36,8 @@ func ExampleClient_DescribeInstances() error {
 	fmt.Printf("DescribeInstances Example\n")
 
 	args := DescribeInstancesArgs{
-		//RegionId: "cn-zhangjiakou",
-		RegionId: "ap-northeast-1",
+		RegionId: "cn-zhangjiakou",
+		//RegionId: "ap-northeast-1",
 		//RegionId: "eu-central-1",
 		//RegionId: "ap-southeast-1",
 		Pagination: common.Pagination{
