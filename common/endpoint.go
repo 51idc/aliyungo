@@ -6,6 +6,7 @@ import (
 	"io/ioutil"
 	"os"
 	"strings"
+	"sync"
 )
 
 const (
@@ -16,8 +17,17 @@ const (
 	HTTPS_PROTOCOL          = "https"
 )
 
+// SyncMap wraps built-in map by using RWMutex for concurrent safe.
+type SyncMap struct {
+	items map[Region]map[string]string
+	sync.RWMutex
+}
+
 var (
-	endpoints = make(map[Region]map[string]string)
+	// endpoints = make(map[Region]map[string]string)
+	endpoints = SyncMap{
+		items: make(map[Region]map[string]string),
+	}
 )
 
 //init endpoints from file
@@ -46,7 +56,10 @@ func (client *Client) DescribeEndpoint(args *DescribeEndpointArgs) (*DescribeEnd
 }
 
 func getProductRegionEndpoint(region Region, serviceCode string) string {
-	if sp, ok := endpoints[region]; ok {
+	endpoints.RLock()
+	sp, ok := endpoints.items[region]
+	endpoints.RUnlock()
+	if ok {
 		if endpoint, ok := sp[serviceCode]; ok {
 			return endpoint
 		}
@@ -56,9 +69,11 @@ func getProductRegionEndpoint(region Region, serviceCode string) string {
 }
 
 func setProductRegionEndpoint(region Region, serviceCode string, endpoint string) {
-	endpoints[region] = map[string]string{
+	endpoints.Lock()
+	endpoints.items[region] = map[string]string{
 		serviceCode: endpoint,
 	}
+	endpoints.Unlock()
 }
 
 func (client *Client) DescribeOpenAPIEndpoint(region Region, serviceCode string) string {
