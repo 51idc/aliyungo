@@ -40,7 +40,7 @@ func (client *Client) Init(endpoint, version, accessKeyId, accessKeySecret strin
 	client.AccessKeySecret = accessKeySecret + "&"
 	client.debug = false
 	client.httpClient = &http.Client{
-		//Timeout: 5 * time.Second, // 从连接(Dial)到读完response body
+		Timeout: 10 * time.Second, // 从连接(Dial)到读完response body
 		Transport: &http.Transport{
 			DisableCompression: true,
 			//Dial: (&net.Dialer{
